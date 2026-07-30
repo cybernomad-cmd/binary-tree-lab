@@ -19,4 +19,6 @@ def max_depth(root: Optional[TreeNode]) -> int:
 
 # TODO: Implement the lowest_common_ancestor function
 def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
-    pass
+
+    if p.val < root.val and q.val < root.val:
+        return lowest_common_ancestor(root.left, p, q)
