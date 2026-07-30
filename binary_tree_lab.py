@@ -12,6 +12,11 @@ def max_depth(root: Optional[TreeNode]) -> int:
     if root is None:
         return 0
 
+    left_depth = max_depth(root.left)
+    right_depth = max_depth(root.right)
+
+    return max(left_depth, right_depth) + 1
+
 # TODO: Implement the lowest_common_ancestor function
 def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
     pass
