@@ -8,7 +8,9 @@ class TreeNode:
 
 # TODO: Implement the max_depth function
 def max_depth(root: Optional[TreeNode]) -> int:
-    pass
+    # Base case: an empty tree has depth 0.
+    if root is None:
+        return 0
 
 # TODO: Implement the lowest_common_ancestor function
 def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
